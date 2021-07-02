@@ -1,0 +1,28 @@
+{
+  "name": "api-project",
+  "version": "1.0.0",
+  "description": "simple api for food",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jowest015/Project-2.git"
+  },
+  "keywords": [
+    "recipe",
+    "food",
+    "box"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jowest015/Project-2/issues"
+  },
+  "homepage": "https://github.com/Jowest015/Project-2#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
