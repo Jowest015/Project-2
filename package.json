@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Jowest015/Project-2#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "pg-promise": "^10.10.2"
   }
 }
