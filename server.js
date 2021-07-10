@@ -1,8 +1,5 @@
 var express = require('express');
 var pgp = require('pg-promise');
-
-// var dbSettings = {user:"postgres", password:"Mr6tBU?RSe",  database: "recipe"};
-// var db = pgp(dbSettings);
 var dbMaker = require('./dbUtility/utility');
 
 var app = express();

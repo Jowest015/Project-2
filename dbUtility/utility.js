@@ -9,6 +9,11 @@ class dbMaker {
   async output(){
     return await this.db.query(`SELECT * FROM recipe`)
   }
+  input(){
+    //insert
+  }
+
+  
 }
 
 module.exports = dbMaker
