@@ -5,8 +5,6 @@ var dbMaker = require('./dbUtility/utility');
 var app = express();
 var PORT = 2340;
 
-// console.log(db);
-
 app.get('/', async (_req, res, next) => {
   try {
     const results = await new dbMaker().output();
