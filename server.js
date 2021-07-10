@@ -1,18 +1,25 @@
 var express = require('express');
-var pgp = require('pg-promise')();
+var pgp = require('pg-promise');
+
+// var dbSettings = {user:"postgres", password:"Mr6tBU?RSe",  database: "recipe"};
+// var db = pgp(dbSettings);
+var dbMaker = require('./dbUtility/utility');
 
 var app = express();
 var PORT = 2340;
-
-var dbSettings = {user:"postgres", password:"Mr6tBU?RSe",  database: "recipe"};
-var db = pgp(dbSettings);
 
 // console.log(db);
 
 app.get('/', async (_req, res, next) => {
   try {
-    const results = await db.query(`SELECT * FROM recipe`);
-    res.send({results});
+    const results = await new dbMaker().output();
+    res.send({
+      results,
+      meta:{
+        success: true,
+        info: _req.route
+      }
+    });
   } catch (error) {
     next(error);
     res.send({
