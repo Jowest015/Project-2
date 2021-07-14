@@ -1,9 +1,16 @@
-var express = require('express');
-var pgp = require('pg-promise');
-var dbMaker = require('./dbUtility/utility');
+const express = require('express');
+const pgp = require('pg-promise');
+const body = require('body-parser');
+const morgan = require('morgan');
+const dbMaker = require('./dbUtility/utility');
+const routes = require('./routes/index');
 
-var app = express();
-var PORT = 2340;
+const app = express();
+const PORT = 2340;
+
+//routes
+app.use(routes);
+
 
 app.get('/', async (_req, res, next) => {
   try {

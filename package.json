@@ -23,8 +23,12 @@
   },
   "homepage": "https://github.com/Jowest015/Project-2#readme",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.11",
+    "passport": "^0.4.1",
+    "passport-github2": "^0.1.12",
     "pg-promise": "^10.10.2"
   }
 }
